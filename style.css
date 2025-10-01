@@ -1,0 +1,156 @@
+* { 
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #1A1A1A;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow gradient kanan bawah */
+body::after {
+  content: "";
+  position: absolute;
+  right: -200px;
+  bottom: -200px;
+  width: 800px;
+  height: 800px;
+  background:
+    radial-gradient(circle at bottom right, #5F30F8 22%, transparent 60%),
+    radial-gradient(circle at bottom right, #FC8867 0%, transparent 100%);
+  filter: blur(60px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.testimonial-section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.header {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #5F30F8 0%, #FC8867 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 6px;
+}
+
+.nav-top {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.nav-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: none;
+  background: #222;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn:hover {
+  background: #333;
+}
+
+.carousel {
+  width: 100%;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: nowrap; 
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.card {       
+  min-width: 275px;        
+  background: rgba(33,33,33, 0.6);
+  border-radius: 12px;
+  padding: 25px 23px;
+  display: flex;
+  flex-direction: column;
+}
+
+.text {
+  font-size: 0.75rem;
+  color: #ddd;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  text-align: center;     
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 15px;
+}
+
+.stars .material-symbols-outlined.active {
+  color: #FFD700; 
+}
+
+.stars .material-symbols-outlined {
+  color: #555; 
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;       
+  text-align: center;
+}
+
+.user img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.user p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #aaa;
+}
